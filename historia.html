@@ -1,0 +1,758 @@
+<html lang="es">
+
+<head>
+
+    <title>Historia | Pasión Blanquiverde</title>
+
+    <link rel="icon" href="images/logo_web.png">
+
+    <style>
+
+        /* =========================
+           ESTILOS GENERALES
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f4f7f5;
+            font-family: Arial, sans-serif;
+            color: #222222;
+        }
+
+
+        /* =========================
+           MENU
+        ========================= */
+
+        nav {
+            background-color: #004d26;
+
+            height: 85px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.20);
+
+            z-index: 10;
+        }
+
+        .logo-cordoba {
+            width: 58px;
+
+            position: absolute;
+            left: 25px;
+
+            transition: 0.3s;
+        }
+
+        .logo-cordoba:hover {
+            transform: scale(1.08);
+        }
+
+        .logo-derecha {
+            width: 65px;
+
+            position: absolute;
+            right: 25px;
+
+            transition: 0.3s;
+        }
+
+        .logo-derecha:hover {
+            transform: scale(1.08);
+        }
+
+        nav a {
+            color: white;
+
+            text-decoration: none;
+
+            margin: 0 25px;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #a8d5ba;
+        }
+
+        nav a.activo {
+            color: #a8d5ba;
+        }
+
+
+        /* =========================
+           CABECERA
+        ========================= */
+
+        .cabecera {
+            background:
+                linear-gradient(
+                    rgba(0, 77, 38, 0.94),
+                    rgba(0, 45, 23, 0.96)
+                );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 80px 20px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .cabecera::before {
+            content: "";
+
+            width: 400px;
+            height: 400px;
+
+            border: 2px solid rgba(255, 255, 255, 0.07);
+
+            border-radius: 50%;
+
+            position: absolute;
+
+            top: -220px;
+            left: -100px;
+        }
+
+        .cabecera::after {
+            content: "";
+
+            width: 500px;
+            height: 500px;
+
+            border: 2px solid rgba(255, 255, 255, 0.06);
+
+            border-radius: 50%;
+
+            position: absolute;
+
+            bottom: -320px;
+            right: -150px;
+        }
+
+        .cabecera img {
+            width: 90px;
+
+            margin-bottom: 20px;
+
+            filter: drop-shadow(
+                0 5px 10px rgba(0, 0, 0, 0.35)
+            );
+        }
+
+        .cabecera h1 {
+            font-size: 52px;
+
+            margin: 0;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+        }
+
+        .cabecera p {
+            font-size: 19px;
+
+            color: #dcefe3;
+
+            margin-top: 15px;
+        }
+
+
+        /* =========================
+           INTRODUCCION
+        ========================= */
+
+        .introduccion {
+            max-width: 900px;
+
+            margin: auto;
+
+            text-align: center;
+
+            padding: 70px 20px 40px;
+        }
+
+        .introduccion h2 {
+            color: #004d26;
+
+            font-size: 32px;
+
+            margin-bottom: 15px;
+        }
+
+        .linea {
+            width: 60px;
+
+            height: 4px;
+
+            background-color: #00843d;
+
+            margin: 0 auto 30px;
+
+            border-radius: 10px;
+        }
+
+        .introduccion p {
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            color: #555555;
+        }
+
+
+        /* =========================
+           LINEA DEL TIEMPO
+        ========================= */
+
+        .historia {
+            max-width: 1000px;
+
+            margin: auto;
+
+            padding: 30px 20px 80px;
+        }
+
+        .momento {
+            background-color: white;
+
+            padding: 30px;
+
+            margin: 30px 0;
+
+            border-radius: 15px;
+
+            border-left: 5px solid #006633;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.08);
+
+            position: relative;
+
+            transition: 0.3s;
+        }
+
+        .momento:hover {
+            transform: translateX(8px);
+
+            box-shadow:
+                0 10px 25px rgba(0, 77, 38, 0.15);
+        }
+
+        .año {
+            display: inline-block;
+
+            background-color: #004d26;
+
+            color: white;
+
+            padding: 8px 18px;
+
+            border-radius: 20px;
+
+            font-weight: bold;
+
+            font-size: 15px;
+
+            margin-bottom: 15px;
+        }
+
+        .momento h2 {
+            color: #004d26;
+
+            font-size: 27px;
+
+            margin: 5px 0 15px;
+        }
+
+        .momento p {
+            color: #555555;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+
+            margin: 0;
+        }
+
+
+        /* =========================
+           BLOQUE DESTACADO
+        ========================= */
+
+        .destacado {
+            background-color: #004d26;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 65px 20px;
+
+            margin-top: 20px;
+        }
+
+        .destacado h2 {
+            font-size: 35px;
+
+            margin: 0 0 15px;
+        }
+
+        .destacado p {
+            max-width: 750px;
+
+            margin: auto;
+
+            color: #dcefe3;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+        }
+
+        .numero {
+            font-size: 55px;
+
+            font-weight: bold;
+
+            color: #a8d5ba;
+
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================
+           FRASE FINAL
+        ========================= */
+
+        .frase {
+            text-align: center;
+
+            padding: 70px 20px;
+
+            background-color: #f4f7f5;
+        }
+
+        .frase h2 {
+            color: #004d26;
+
+            font-size: 32px;
+
+            margin-bottom: 10px;
+        }
+
+        .frase p {
+            color: #666666;
+
+            font-size: 19px;
+        }
+
+        .verde {
+            color: #006633;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #00351a;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        footer p {
+            margin: 5px;
+
+            color: #cce5d5;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           ANIMACION
+        ========================= */
+
+        .aparecer {
+            animation: aparecer 0.8s ease;
+        }
+
+        @keyframes aparecer {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =========================
+           MOVIL
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .cabecera h1 {
+                font-size: 40px;
+            }
+
+            nav a {
+                margin: 0 8px;
+
+                font-size: 13px;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .logo-cordoba,
+            .logo-derecha {
+                display: none;
+            }
+
+            .cabecera {
+                padding: 60px 20px;
+            }
+
+            .cabecera h1 {
+                font-size: 32px;
+            }
+
+            .cabecera p {
+                font-size: 17px;
+            }
+
+            .momento {
+                padding: 25px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         MENU
+    ========================= -->
+
+    <nav>
+
+        <!-- Escudo -->
+        <img class="logo-cordoba"
+             src="images/cordobacf_escudo.png"
+             alt="Escudo del Córdoba CF">
+
+
+        <!-- Enlaces -->
+        <div>
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a class="activo" href="historia.html">
+                Historia
+            </a>
+
+            <a href="plantilla.html">
+                Plantilla
+            </a>
+
+            <a href="estadio.html">
+                Estadio
+            </a>
+
+        </div>
+
+
+        <!-- Logo de la web -->
+        <img class="logo-derecha"
+             src="images/logo_web.png"
+             alt="Logo Pasión Blanquiverde">
+
+    </nav>
+
+
+
+    <!-- =========================
+         CABECERA
+    ========================= -->
+
+    <div class="cabecera">
+
+        <img src="images/cordobacf_escudo.png"
+             alt="Escudo del Córdoba CF">
+
+        <h1>
+            Nuestra Historia
+        </h1>
+
+        <p>
+            Más de un siglo de fútbol, pasión y sentimiento blanquiverde.
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         INTRODUCCION
+    ========================= -->
+
+    <section class="introduccion">
+
+        <h2>
+            Un club con historia
+        </h2>
+
+        <div class="linea"></div>
+
+        <p>
+            El Córdoba Club de Fútbol forma parte de la historia
+            deportiva de Andalucía. A lo largo de los años,
+            el club ha vivido grandes momentos, temporadas
+            difíciles y etapas inolvidables junto a su afición.
+        </p>
+
+        <p>
+            Esta es una pequeña recopilación de algunos de los
+            momentos que han marcado el camino del Córdoba CF.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         HISTORIA
+    ========================= -->
+
+    <section class="historia">
+
+
+        <!-- MOMENTO 1 -->
+
+        <div class="momento aparecer">
+
+            <div class="año">
+                1954
+            </div>
+
+            <h2>
+                Nace el Córdoba Club de Fútbol
+            </h2>
+
+            <p>
+                El Córdoba Club de Fútbol se constituye en 1954,
+                comenzando una historia que acabaría convirtiendo
+                al club en uno de los equipos más reconocidos
+                del fútbol andaluz.
+            </p>
+
+        </div>
+
+
+        <!-- MOMENTO 2 -->
+
+        <div class="momento aparecer">
+
+            <div class="año">
+                Años 60
+            </div>
+
+            <h2>
+                La época dorada
+            </h2>
+
+            <p>
+                Durante la década de los sesenta el Córdoba vive
+                uno de los períodos más importantes de su historia.
+                El equipo consigue alcanzar la Primera División
+                y competir contra algunos de los grandes clubes
+                del fútbol español.
+            </p>
+
+        </div>
+
+
+        <!-- MOMENTO 3 -->
+
+        <div class="momento aparecer">
+
+            <div class="año">
+                1962
+            </div>
+
+            <h2>
+                El Córdoba llega a Primera
+            </h2>
+
+            <p>
+                El ascenso a Primera División marca un antes y un
+                después para el club. Córdoba disfruta de fútbol
+                de máximo nivel y el equipo se convierte en uno
+                de los grandes protagonistas de la ciudad.
+            </p>
+
+        </div>
+
+
+        <!-- MOMENTO 4 -->
+
+        <div class="momento aparecer">
+
+            <div class="año">
+                2014
+            </div>
+
+            <h2>
+                El regreso a Primera
+            </h2>
+
+            <p>
+                Después de muchos años, el Córdoba vuelve a alcanzar
+                la máxima categoría del fútbol español. El ascenso
+                de 2014 fue uno de los momentos más emocionantes
+                vividos por el cordobesismo en las últimas décadas.
+            </p>
+
+        </div>
+
+
+        <!-- MOMENTO 5 -->
+
+        <div class="momento aparecer">
+
+            <div class="año">
+                2024
+            </div>
+
+            <h2>
+                De nuevo en Segunda División
+            </h2>
+
+            <p>
+                El Córdoba consigue regresar al fútbol profesional
+                tras una gran temporada y un ascenso que vuelve
+                a unir a toda la ciudad alrededor del equipo.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         BLOQUE DESTACADO
+    ========================= -->
+
+    <section class="destacado">
+
+        <div class="numero">
+            100+
+        </div>
+
+        <h2>
+            Años de sentimiento
+        </h2>
+
+        <p>
+            Generaciones de cordobesistas han acompañado al club
+            en las buenas y en las malas. Porque la historia del
+            Córdoba CF no se entiende sin su afición.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         FRASE FINAL
+    ========================= -->
+
+    <section class="frase">
+
+        <h2>
+            LA HISTORIA CONTINÚA
+        </h2>
+
+        <p>
+            El pasado nos representa.
+            El futuro nos espera.
+        </p>
+
+        <p class="verde">
+            Y nosotros estaremos ahí. 💚
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            Pasión Blanquiverde
+        </p>
+
+        <p>
+            Una web hecha por y para cordobesistas 💚
+        </p>
+
+        <p>
+            Córdoba CF · 2026/27
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

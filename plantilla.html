@@ -1,0 +1,571 @@
+<html lang="es">
+
+<head>
+    <title>Plantilla | Pasión Blanquiverde</title>
+    <link rel="icon" href="images/logo_web.png">
+
+    <style>
+
+        /* ESTILOS GENERALES */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f5f7f5;
+            font-family: Arial, sans-serif;
+            color: #222222;
+        }
+
+
+        /* MENU */
+
+        nav {
+            background-color: #004d26;
+            height: 85px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.20);
+        }
+
+        .logo-cordoba {
+            width: 58px;
+            position: absolute;
+            left: 25px;
+        }
+
+        .logo-derecha {
+            width: 65px;
+            position: absolute;
+            right: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+
+            margin: 0 25px;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #b7e4c7;
+        }
+
+
+        /* CABECERA */
+
+        .cabecera {
+            text-align: center;
+
+            padding: 65px 20px 45px;
+
+            background-color: white;
+
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .cabecera h1 {
+            margin: 0;
+
+            color: #004d26;
+
+            font-size: 48px;
+            letter-spacing: 2px;
+        }
+
+        .cabecera p {
+            margin-top: 12px;
+
+            color: #666666;
+
+            font-size: 18px;
+        }
+
+        .linea-verde {
+            width: 70px;
+            height: 4px;
+
+            background-color: #00843d;
+
+            margin: 25px auto 0;
+
+            border-radius: 10px;
+        }
+
+
+        /* CONTENIDO */
+
+        .contenido {
+            width: 90%;
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 50px 0 70px;
+        }
+
+        .titulo-seccion {
+            color: #004d26;
+
+            font-size: 28px;
+
+            margin-top: 50px;
+            margin-bottom: 25px;
+
+            border-left: 5px solid #00843d;
+
+            padding-left: 15px;
+        }
+
+
+        /* TARJETAS */
+
+        .jugadores {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .jugador {
+            background-color: white;
+
+            border-radius: 12px;
+
+            padding: 25px;
+
+            min-height: 130px;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-top: 4px solid #006633;
+        }
+
+        .jugador:hover {
+            transform: translateY(-6px);
+
+            box-shadow: 0 10px 25px rgba(0, 77, 38, 0.20);
+        }
+
+
+        /* DORSAL */
+
+        .dorsal {
+            position: absolute;
+
+            right: 15px;
+            top: 5px;
+
+            font-size: 60px;
+
+            font-weight: bold;
+
+            color: #e6eee9;
+
+            line-height: 1;
+        }
+
+
+        /* NOMBRE */
+
+        .nombre {
+            position: relative;
+
+            color: #004d26;
+
+            font-size: 19px;
+
+            font-weight: bold;
+
+            margin: 35px 0 8px;
+        }
+
+
+        /* POSICION */
+
+        .posicion {
+            color: #777777;
+
+            font-size: 14px;
+
+            margin: 0;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background-color: #003b1d;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 6px;
+        }
+
+        .verde {
+            color: #8ed1a8;
+
+            font-weight: bold;
+        }
+
+
+        /* ADAPTACIÓN A MÓVIL */
+
+        @media (max-width: 900px) {
+
+            .jugadores {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            nav a {
+                margin: 0 8px;
+                font-size: 13px;
+            }
+
+            .logo-cordoba,
+            .logo-derecha {
+                display: none;
+            }
+
+            .jugadores {
+                grid-template-columns: 1fr;
+            }
+
+            .cabecera h1 {
+                font-size: 34px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- MENU -->
+
+    <nav>
+
+        <img class="logo-cordoba"
+             src="images/cordobacf_escudo.png"
+             alt="Escudo del Córdoba CF">
+
+        <div>
+
+            <a href="index.html">Inicio</a>
+
+            <a href="historia.html">Historia</a>
+
+            <a href="plantilla.html">Plantilla</a>
+
+            <a href="estadio.html">Estadio</a>
+
+        </div>
+
+        <img class="logo-derecha"
+             src="images/logo_web.png"
+             alt="Logo Pasión Blanquiverde">
+
+    </nav>
+
+
+    <!-- CABECERA -->
+
+    <header class="cabecera">
+
+        <h1>PLANTILLA 2026/27</h1>
+
+        <p>
+            Los protagonistas de nuestra pasión blanquiverde
+        </p>
+
+        <div class="linea-verde"></div>
+
+    </header>
+
+
+    <!-- CONTENIDO -->
+
+    <main class="contenido">
+
+
+        <!-- PORTEROS -->
+
+        <h2 class="titulo-seccion">
+            Porteros
+        </h2>
+
+        <div class="jugadores">
+
+            <div class="jugador">
+
+                <span class="dorsal">1</span>
+
+                <h3 class="nombre">
+                    Iker Álvarez
+                </h3>
+
+                <p class="posicion">
+                    Portero
+                </p>
+
+            </div>
+
+
+            <div class="jugador">
+
+                <span class="dorsal">13</span>
+
+                <h3 class="nombre">
+                    Guilherme Fernandes
+                </h3>
+
+                <p class="posicion">
+                    Portero
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- DEFENSAS -->
+
+        <h2 class="titulo-seccion">
+            Defensas
+        </h2>
+
+        <div class="jugadores">
+
+            <div class="jugador">
+                <span class="dorsal">3</span>
+                <h3 class="nombre">Dani Tasende</h3>
+                <p class="posicion">Defensa</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">4</span>
+                <h3 class="nombre">Álex Martín</h3>
+                <p class="posicion">Defensa</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">5</span>
+                <h3 class="nombre">Juan Gutiérrez</h3>
+                <p class="posicion">Defensa</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">12</span>
+                <h3 class="nombre">Fomeyem</h3>
+                <p class="posicion">Defensa</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">16</span>
+                <h3 class="nombre">Rubén Alves</h3>
+                <p class="posicion">Defensa</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">20</span>
+                <h3 class="nombre">Nélson Monte</h3>
+                <p class="posicion">Defensa</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">21</span>
+                <h3 class="nombre">Carlos Albarrán</h3>
+                <p class="posicion">Defensa</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">27</span>
+                <h3 class="nombre">Egoitz Muñoz</h3>
+                <p class="posicion">Defensa</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">29</span>
+                <h3 class="nombre">Jacobo Martínez</h3>
+                <p class="posicion">Defensa</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">30</span>
+                <h3 class="nombre">Daniel Budesca</h3>
+                <p class="posicion">Defensa</p>
+            </div>
+
+        </div>
+
+
+        <!-- CENTROCAMPISTAS -->
+
+        <h2 class="titulo-seccion">
+            Centrocampistas
+        </h2>
+
+        <div class="jugadores">
+
+            <div class="jugador">
+                <span class="dorsal">6</span>
+                <h3 class="nombre">Damián</h3>
+                <p class="posicion">Centrocampista</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">7</span>
+                <h3 class="nombre">Théo</h3>
+                <p class="posicion">Centrocampista</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">8</span>
+                <h3 class="nombre">Isma Ruiz</h3>
+                <p class="posicion">Centrocampista</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">14</span>
+                <h3 class="nombre">Adnane Ghailan</h3>
+                <p class="posicion">Centrocampista</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">22</span>
+                <h3 class="nombre">Youssouf Diarra</h3>
+                <p class="posicion">Centrocampista</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">28</span>
+                <h3 class="nombre">Eder García</h3>
+                <p class="posicion">Centrocampista</p>
+            </div>
+
+        </div>
+
+
+        <!-- DELANTEROS -->
+
+        <h2 class="titulo-seccion">
+            Delanteros
+        </h2>
+
+        <div class="jugadores">
+
+            <div class="jugador">
+                <span class="dorsal">9</span>
+                <h3 class="nombre">Percan</h3>
+                <p class="posicion">Delantero</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">10</span>
+                <h3 class="nombre">Kevin Medina</h3>
+                <p class="posicion">Delantero</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">11</span>
+                <h3 class="nombre">Diego Bri</h3>
+                <p class="posicion">Delantero</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">15</span>
+                <h3 class="nombre">Víctor</h3>
+                <p class="posicion">Delantero</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">17</span>
+                <h3 class="nombre">Adilson</h3>
+                <p class="posicion">Delantero</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">18</span>
+                <h3 class="nombre">Enol</h3>
+                <p class="posicion">Delantero</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">19</span>
+                <h3 class="nombre">Ibai Sanz</h3>
+                <p class="posicion">Delantero</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">23</span>
+                <h3 class="nombre">Cristian Carracedo</h3>
+                <p class="posicion">Delantero</p>
+            </div>
+
+            <div class="jugador">
+                <span class="dorsal">24</span>
+                <h3 class="nombre">El Jebari</h3>
+                <p class="posicion">Delantero</p>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- PIE DE PAGINA -->
+
+    <footer>
+
+        <p>
+            Pasión Blanquiverde
+        </p>
+
+        <p class="verde">
+            Una web hecha por y para cordobesistas 💚
+        </p>
+
+        <p>
+            ¡Vamos Córdoba!
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

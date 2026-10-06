@@ -1,0 +1,1117 @@
+<html lang="es">
+
+<head>
+
+    <title>El Arcángel | Pasión Blanquiverde</title>
+
+    <link rel="icon" href="images/logo_web.png">
+
+    <style>
+
+        /* =========================
+           ESTILOS GENERALES
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f4f7f5;
+            font-family: Arial, sans-serif;
+            color: #222222;
+        }
+
+
+        /* =========================
+           MENU
+        ========================= */
+
+        nav {
+            background-color: #004d26;
+
+            height: 85px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.20);
+
+            z-index: 10;
+        }
+
+        .logo-cordoba {
+            width: 58px;
+
+            position: absolute;
+            left: 25px;
+
+            transition: 0.3s;
+        }
+
+        .logo-cordoba:hover {
+            transform: scale(1.08);
+        }
+
+        .logo-derecha {
+            width: 65px;
+
+            position: absolute;
+            right: 25px;
+
+            transition: 0.3s;
+        }
+
+        .logo-derecha:hover {
+            transform: scale(1.08);
+        }
+
+        nav a {
+            color: white;
+
+            text-decoration: none;
+
+            margin: 0 25px;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #a8d5ba;
+        }
+
+        nav a.activo {
+            color: #a8d5ba;
+        }
+
+
+        /* =========================
+           PORTADA DEL ESTADIO
+        ========================= */
+
+        .hero-estadio {
+
+            min-height: 650px;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 70px 20px;
+
+            color: white;
+
+            position: relative;
+
+            overflow: hidden;
+
+            /* FOTO DEL ESTADIO */
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 45, 23, 0.78),
+                    rgba(0, 77, 38, 0.88)
+                ),
+                url("images/arcangel1.png");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-repeat: no-repeat;
+        }
+
+
+        /* Círculo decorativo */
+
+        .hero-estadio::before {
+
+            content: "";
+
+            width: 600px;
+            height: 600px;
+
+            border: 2px solid rgba(255, 255, 255, 0.08);
+
+            border-radius: 50%;
+
+            position: absolute;
+
+            top: -350px;
+            left: -180px;
+        }
+
+
+        /* Segundo círculo */
+
+        .hero-estadio::after {
+
+            content: "";
+
+            width: 700px;
+            height: 700px;
+
+            border: 2px solid rgba(255, 255, 255, 0.06);
+
+            border-radius: 50%;
+
+            position: absolute;
+
+            bottom: -450px;
+            right: -200px;
+        }
+
+
+        /* Escudo */
+
+        .hero-estadio img {
+
+            width: 115px;
+
+            margin-bottom: 25px;
+
+            filter:
+                drop-shadow(
+                    0 8px 15px rgba(0, 0, 0, 0.50)
+                );
+
+            animation: aparecer 1s ease;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        /* Título */
+
+        .hero-estadio h1 {
+
+            font-size: 68px;
+
+            margin: 0;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            text-shadow:
+                0 4px 20px rgba(0, 0, 0, 0.50);
+
+            animation: aparecer 1s ease;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .hero-estadio h1 span {
+            color: #a8d5ba;
+        }
+
+
+        /* Texto */
+
+        .hero-estadio p {
+
+            max-width: 700px;
+
+            font-size: 20px;
+
+            line-height: 1.6;
+
+            color: #e8f2eb;
+
+            margin-top: 20px;
+
+            text-shadow:
+                0 2px 8px rgba(0, 0, 0, 0.50);
+
+            animation: aparecer 1.2s ease;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        /* Botón */
+
+        .boton {
+
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding: 14px 30px;
+
+            border: 2px solid white;
+
+            border-radius: 30px;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .boton:hover {
+
+            background-color: white;
+
+            color: #004d26;
+
+            transform: translateY(-4px);
+        }
+
+
+        /* =========================
+           INTRODUCCIÓN
+        ========================= */
+
+        .introduccion {
+
+            max-width: 950px;
+
+            margin: auto;
+
+            text-align: center;
+
+            padding: 75px 20px 50px;
+        }
+
+        .introduccion h2 {
+
+            color: #004d26;
+
+            font-size: 34px;
+
+            margin-bottom: 15px;
+        }
+
+        .linea {
+
+            width: 60px;
+
+            height: 4px;
+
+            background-color: #00843d;
+
+            margin: 0 auto 30px;
+
+            border-radius: 10px;
+        }
+
+        .introduccion p {
+
+            color: #555555;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           DATOS DEL ESTADIO
+        ========================= */
+
+        .datos {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 20px 20px 80px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .dato {
+
+            background-color: white;
+
+            text-align: center;
+
+            padding: 35px 20px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.08);
+
+            border-bottom: 4px solid #006633;
+
+            transition: 0.3s;
+        }
+
+        .dato:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 12px 25px rgba(0, 77, 38, 0.17);
+        }
+
+        .dato .numero {
+
+            font-size: 35px;
+
+            font-weight: bold;
+
+            color: #004d26;
+
+            margin-bottom: 10px;
+        }
+
+        .dato h3 {
+
+            margin: 0;
+
+            color: #444444;
+
+            font-size: 16px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================
+           INFORMACIÓN DEL ESTADIO
+        ========================= */
+
+        .bloque {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 20px 20px 80px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 40px;
+
+            align-items: center;
+        }
+
+        .bloque-texto h2 {
+
+            color: #004d26;
+
+            font-size: 34px;
+
+            margin-top: 0;
+        }
+
+        .bloque-texto p {
+
+            color: #555555;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+        }
+
+        .bloque-imagen {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #004d26,
+                    #00843d
+                );
+
+            border-radius: 20px;
+
+            padding: 45px;
+
+            text-align: center;
+
+            box-shadow:
+                0 12px 30px rgba(0, 77, 38, 0.20);
+
+            transition: 0.3s;
+        }
+
+        .bloque-imagen:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 18px 35px rgba(0, 77, 38, 0.25);
+        }
+
+        .bloque-imagen .icono {
+
+            font-size: 100px;
+
+            margin-bottom: 15px;
+        }
+
+        .bloque-imagen h3 {
+
+            color: white;
+
+            font-size: 25px;
+
+            margin: 0;
+        }
+
+        .bloque-imagen p {
+
+            color: #dcefe3;
+
+            margin-bottom: 0;
+        }
+
+
+        /* =========================
+           EXPERIENCIA DEL ARCÁNGEL
+        ========================= */
+
+        .experiencia {
+
+            background-color: #004d26;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 80px 20px;
+        }
+
+        .experiencia h2 {
+
+            font-size: 38px;
+
+            margin: 0 0 15px;
+        }
+
+        .experiencia > p {
+
+            color: #dcefe3;
+
+            font-size: 18px;
+
+            max-width: 700px;
+
+            margin: auto;
+
+            line-height: 1.7;
+        }
+
+
+        /* Tarjetas */
+
+        .experiencias {
+
+            max-width: 1000px;
+
+            margin: 45px auto 0;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .experiencia-card {
+
+            background-color:
+                rgba(255, 255, 255, 0.09);
+
+            border: 1px solid
+                rgba(255, 255, 255, 0.12);
+
+            border-radius: 15px;
+
+            padding: 30px 20px;
+
+            transition: 0.3s;
+        }
+
+        .experiencia-card:hover {
+
+            background-color:
+                rgba(255, 255, 255, 0.15);
+
+            transform: translateY(-8px);
+        }
+
+        .experiencia-card .icono {
+
+            font-size: 40px;
+
+            margin-bottom: 10px;
+        }
+
+        .experiencia-card h3 {
+
+            margin: 10px 0;
+
+            font-size: 21px;
+        }
+
+        .experiencia-card p {
+
+            color: #cce5d5;
+
+            font-size: 15px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           FRASE FINAL
+        ========================= */
+
+        .frase {
+
+            text-align: center;
+
+            padding: 80px 20px;
+
+            background-color: #f4f7f5;
+        }
+
+        .frase h2 {
+
+            color: #004d26;
+
+            font-size: 38px;
+
+            margin-bottom: 10px;
+        }
+
+        .frase p {
+
+            color: #666666;
+
+            font-size: 19px;
+        }
+
+        .frase .verde {
+
+            color: #006633;
+
+            font-weight: bold;
+
+            font-size: 21px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            background-color: #00351a;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        footer p {
+
+            margin: 5px;
+
+            color: #cce5d5;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           ANIMACION
+        ========================= */
+
+        @keyframes aparecer {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(25px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .datos {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .bloque {
+
+                grid-template-columns: 1fr;
+            }
+
+            .experiencias {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+        }
+
+
+        /* =========================
+           MOVIL
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .logo-cordoba,
+            .logo-derecha {
+
+                display: none;
+            }
+
+            nav a {
+
+                margin: 0 8px;
+
+                font-size: 13px;
+            }
+
+            .hero-estadio {
+
+                min-height: 520px;
+            }
+
+            .hero-estadio h1 {
+
+                font-size: 38px;
+
+                letter-spacing: 2px;
+            }
+
+            .hero-estadio p {
+
+                font-size: 17px;
+            }
+
+            .datos {
+
+                grid-template-columns: 1fr;
+            }
+
+            .bloque-imagen {
+
+                padding: 35px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         MENU
+    ========================= -->
+
+    <nav>
+
+        <!-- Escudo del Córdoba -->
+        <img class="logo-cordoba"
+             src="images/cordobacf_escudo.png"
+             alt="Escudo del Córdoba CF">
+
+
+        <!-- Menú -->
+
+        <div>
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="historia.html">
+                Historia
+            </a>
+
+            <a href="plantilla.html">
+                Plantilla
+            </a>
+
+            <a class="activo" href="estadio.html">
+                Estadio
+            </a>
+
+        </div>
+
+
+        <!-- Logo de Pasión Blanquiverde -->
+
+        <img class="logo-derecha"
+             src="images/logo_web.png"
+             alt="Logo Pasión Blanquiverde">
+
+    </nav>
+
+
+
+    <!-- =========================
+         PORTADA
+    ========================= -->
+
+    <div class="hero-estadio">
+
+        <img src="images/cordobacf_escudo.png"
+             alt="Escudo del Córdoba CF">
+
+
+        <h1>
+            El <span>Arcángel</span>
+        </h1>
+
+
+        <p>
+            El corazón del cordobesismo.
+            Un estadio, una ciudad y miles de voces
+            defendiendo los colores blanquiverdes.
+        </p>
+
+
+        <a class="boton" href="#informacion">
+            Descubrir el estadio ↓
+        </a>
+
+    </div>
+
+
+
+    <!-- =========================
+         INTRODUCCIÓN
+    ========================= -->
+
+    <section class="introduccion" id="informacion">
+
+        <h2>
+            Nuestro estadio
+        </h2>
+
+        <div class="linea"></div>
+
+        <p>
+            El Estadio Nuevo Arcángel es la casa del Córdoba Club
+            de Fútbol y uno de los grandes símbolos deportivos
+            de la ciudad de Córdoba.
+        </p>
+
+        <p>
+            Cada jornada, sus gradas se convierten en el punto
+            de encuentro de miles de cordobesistas unidos por
+            una misma pasión.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         DATOS
+    ========================= -->
+
+    <section class="datos">
+
+
+        <div class="dato">
+
+            <div class="numero">
+                25.800
+            </div>
+
+            <h3>
+                Espectadores
+            </h3>
+
+        </div>
+
+
+        <div class="dato">
+
+            <div class="numero">
+                1993
+            </div>
+
+            <h3>
+                Inauguración
+            </h3>
+
+        </div>
+
+
+        <div class="dato">
+
+            <div class="numero">
+                Córdoba
+            </div>
+
+            <h3>
+                Ciudad
+            </h3>
+
+        </div>
+
+
+        <div class="dato">
+
+            <div class="numero">
+                CCF
+            </div>
+
+            <h3>
+                Equipo local
+            </h3>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         INFORMACIÓN
+    ========================= -->
+
+    <section class="bloque">
+
+
+        <div class="bloque-texto">
+
+            <h2>
+                Mucho más que un estadio
+            </h2>
+
+            <p>
+                El Nuevo Arcángel no es solamente el lugar donde
+                se disputan los partidos del Córdoba CF.
+            </p>
+
+            <p>
+                Es el punto de encuentro de una afición que ha
+                acompañado al equipo durante generaciones.
+                Los días de partido, la ciudad cambia y el
+                verde y blanco toman las calles.
+            </p>
+
+            <p>
+                Desde sus gradas se han vivido ascensos,
+                derrotas, celebraciones y momentos que forman
+                parte de la memoria del cordobesismo.
+            </p>
+
+        </div>
+
+
+        <div class="bloque-imagen">
+
+            <div class="icono">
+                🏟️
+            </div>
+
+            <h3>
+                Estadio Nuevo Arcángel
+            </h3>
+
+            <p>
+                La casa del Córdoba CF
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         EXPERIENCIA
+    ========================= -->
+
+    <section class="experiencia">
+
+        <h2>
+            VIVIR EL ARCÁNGEL
+        </h2>
+
+        <p>
+            Porque venir al estadio no consiste solamente
+            en ver un partido.
+        </p>
+
+
+        <div class="experiencias">
+
+
+            <div class="experiencia-card">
+
+                <div class="icono">
+                    🟢
+                </div>
+
+                <h3>
+                    El ambiente
+                </h3>
+
+                <p>
+                    Miles de aficionados compartiendo
+                    una misma pasión antes de que ruede
+                    el balón.
+                </p>
+
+            </div>
+
+
+            <div class="experiencia-card">
+
+                <div class="icono">
+                    📣
+                </div>
+
+                <h3>
+                    La afición
+                </h3>
+
+                <p>
+                    Cánticos, bufandas y voces que hacen
+                    del Arcángel una auténtica caldera.
+                </p>
+
+            </div>
+
+
+            <div class="experiencia-card">
+
+                <div class="icono">
+                    💚
+                </div>
+
+                <h3>
+                    El sentimiento
+                </h3>
+
+                <p>
+                    Noventa minutos en los que una ciudad
+                    entera empuja al equipo.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FRASE FINAL
+    ========================= -->
+
+    <section class="frase">
+
+        <h2>
+            AQUÍ JUEGA EL CÓRDOBA
+        </h2>
+
+        <p>
+            Aquí se gana. Aquí se pierde.
+            Aquí se siente.
+        </p>
+
+        <p class="verde">
+            BIENVENIDOS AL ARCÁNGEL. 💚
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            Pasión Blanquiverde
+        </p>
+
+        <p>
+            Una web hecha por y para cordobesistas 💚
+        </p>
+
+        <p>
+            Córdoba CF · 2026/27
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
